@@ -15,6 +15,9 @@ public class UserDTO implements Serializable {
 	public UserDTO(Optional<User> obj) {
 		
 	}
+	public UserDTO() {
+		
+	}
 	
 	public UserDTO(User obj) {
 		id = obj.getId();
