@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Configuration;
 import com.hugooliveira.workshopmongo.domain.Post;
 import com.hugooliveira.workshopmongo.domain.User;
 import com.hugooliveira.workshopmongo.dto.AuthorDTO;
-import com.hugooliveira.workshopmongo.dto.AuthorDTO;
 import com.hugooliveira.workshopmongo.repository.PostRepository;
 import com.hugooliveira.workshopmongo.repository.UserRepository;
 
@@ -44,6 +43,9 @@ public class instantiation implements CommandLineRunner {
 		
 		
 		postRepository.saveAll(Arrays.asList(post1, post2));
+		
+		maria.getPosts().addAll(Arrays.asList(post1, post2));
+		userRepository.save(maria);
 		
 	}
 	
